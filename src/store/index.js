@@ -18,6 +18,9 @@ export default new Vuex.Store({
   getters: {
     alarm (state) {
       return state.alarm
+    },
+    todos (state) {
+      return state.todos
     }
   },
   mutations: {
@@ -26,6 +29,9 @@ export default new Vuex.Store({
     },
     addTodo (state, data) {
       state.todos.push({ name: data, edit: false, model: data })
+    },
+    dragTodo (state, data) {
+      state.todos = data
     }
   },
   actions: {
