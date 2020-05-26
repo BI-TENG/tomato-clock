@@ -1,8 +1,13 @@
 <template>
   <div id="settings">
-    <b-table :items="items" :fields="fields">
+    <b-table :items="items" :fields="fields" @row-clicked="selectAlarm">
+      <!-- 鬧鐘 -->
       <template v-slot:cell(preview)="data">
         <audio controls :src="'./alarms/'+data.item.file"></audio>
+      </template>
+      <!-- 勾選 -->
+      <template v-slot:cell(select)="data">
+        <font-awesome-icon v-if="data.item.file == alarm" :icon="['fas','check']"></font-awesome-icon>
       </template>
     </b-table>
   </div>
@@ -36,6 +41,16 @@ export default {
           label: '選擇'
         }
       ]
+    }
+  },
+  computed: {
+    alarm () {
+      return this.$store.getters.alarm
+    }
+  },
+  methods: {
+    selectAlarm (item) {
+      this.$store.commit('selectAlarm', item.file)
     }
   }
 }
