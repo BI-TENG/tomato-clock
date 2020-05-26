@@ -9,13 +9,21 @@ export default new Vuex.Store({
     // 剩多少時間
     timeleft: parseInt(process.env.VUE_APP_TIMELEFT),
     // 鈴聲檔名
-    alerm: 'alarm1.mp3',
+    alarm: 'alarm1.mp3',
     // 現在正在做的事情
     current: '',
     // 是否在休息中
     isBreak: false
   },
+  getters: {
+    alarm (state) {
+      return state.alarm
+    }
+  },
   mutations: {
+    selectAlarm (state, data) {
+      state.alarm = data
+    }
   },
   actions: {
   },
