@@ -15,7 +15,16 @@
         </b-tr>
         <b-tr v-else v-for="(todo,index) in todos" :key="index">
           <b-td>{{todo.name}}</b-td>
-          <b-td></b-td>
+          <b-td>
+            <!-- 編輯 -->
+            <b-btn variant="link" class="text-primary">
+              <font-awesome-icon :icon="['fas','pen']"></font-awesome-icon>
+            </b-btn>
+            <!-- 刪除 -->
+            <b-btn variant="link" class="text-danger">
+                <font-awesome-icon :icon="['fas','times']"></font-awesome-icon>
+            </b-btn>
+          </b-td>
         </b-tr>
       </draggable>
     </b-table-simple>
