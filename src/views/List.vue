@@ -13,16 +13,23 @@
         <b-tr v-if="todos.length == 0">
           <b-td colspan="2">沒有資料</b-td>
         </b-tr>
-        <b-tr v-else v-for="(todo,index) in todos" :key="index">
-          <b-td>{{todo.name}}</b-td>
+        <b-tr v-else v-for="(todo, index) in todos" :key="index">
           <b-td>
-            <!-- 編輯 -->
-            <b-btn variant="link" class="text-primary">
-              <font-awesome-icon :icon="['fas','pen']"></font-awesome-icon>
+            <b-form-input v-model="todo.model" v-if="todo.edit"></b-form-input>
+            <b-btn variant="link" class="text-danger" v-if="todo.edit" @click="cancelTodo(index)">
+              <font-awesome-icon :icon="['fas', 'undo']"></font-awesome-icon>
             </b-btn>
-            <!-- 刪除 -->
-            <b-btn variant="link" class="text-danger">
-                <font-awesome-icon :icon="['fas','times']"></font-awesome-icon>
+            <b-btn variant="link" class="text-success" v-if="todo.edit" @click="saveTodo(index)">
+              <font-awesome-icon :icon="['fas', 'save']"></font-awesome-icon>
+            </b-btn>
+            <span v-else>{{ todo.name }}</span>
+          </b-td>
+          <b-td>
+            <b-btn variant="link" class="text-primary" @click="editTodo(index)">
+              <font-awesome-icon :icon="['fas', 'pen']"></font-awesome-icon>
+            </b-btn>
+            <b-btn variant="link" class="text-danger" @click="delTodo(index)">
+              <font-awesome-icon :icon="['fas', 'times']"></font-awesome-icon>
             </b-btn>
           </b-td>
         </b-tr>
@@ -46,6 +53,18 @@ export default {
   methods: {
     addTodo () {
       this.$store.commit('addTodo', this.newtodo)
+    },
+    delTodo (index) {
+      this.$store.commit('delTodo', index)
+    },
+    editTodo (index) {
+      this.$store.commit('editTodo', index)
+    },
+    cancelTodo (index) {
+      this.$store.commit('cancelTodo', index)
+    },
+    saveTodo (index) {
+      this.$store.commit('saveTodo', index)
     }
   },
   // 計算上面 html 的部分
