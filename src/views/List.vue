@@ -20,11 +20,13 @@ export default {
       newtodo: ''
     }
   },
+  // 放 function 的地方
   methods: {
     addTodo () {
       this.$store.commit('addTodo', this.newtodo)
     }
   },
+  // 計算上面 html 的部分
   computed: {
     todos: {
       get () {
