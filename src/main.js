@@ -11,6 +11,8 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 import draggable from 'vuedraggable'
 
+Vue.config.productionTip = false
+
 library.add(faCheck)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
