@@ -3,7 +3,7 @@
     <b-form-input v-model="newtodo"></b-form-input>
     <b-btn variant="success" @click="addTodo">新增</b-btn>
     <b-table-simple>
-      <draggable v-model="todos" tag="tbody">
+      <draggable v-model="todos" tag="tbody" v-bind="dragOption">
         <b-tr v-for="(todo,index) in todos" :key="index">
           <b-td>{{todo.name}}</b-td>
           <b-td></b-td>
@@ -17,7 +17,11 @@
 export default {
   data () {
     return {
-      newtodo: ''
+      newtodo: '',
+      // 轉場效果
+      dragOption: {
+        animation: 200
+      }
     }
   },
   // 放 function 的地方
