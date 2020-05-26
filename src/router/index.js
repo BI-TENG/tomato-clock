@@ -34,6 +34,14 @@ const routes = [
     meta: {
       title: '番茄鐘 | 設定'
     }
+  },
+  {
+    path: '*',
+    name: 'NotFount',
+    component: () => import(/* webpackChunkName: "about" */ '../views/NotFouned.vue'),
+    meta: {
+      title: '番茄鐘 | 404'
+    }
   }
 ]
 
