@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     todos: [],
     // 剩多少時間
-    timeleft: 0,
+    timeleft: parseInt(process.env.VUE_APP_TIMELEFT),
     // 鈴聲檔名
     alerm: '',
     // 現在正在做的事情
