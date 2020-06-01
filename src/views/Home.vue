@@ -78,7 +78,7 @@ export default {
           this.status = 1
           this.timer = setInterval(() => {
             this.$store.commit('countdown')
-            if (this.timeleft <= 0) {
+            if (this.timeleft < 0) {
               this.finish(false)
             }
           }, 1000)
