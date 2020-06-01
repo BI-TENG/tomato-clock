@@ -9,15 +9,17 @@
       <p>Total steps: {{ totalSteps }}</p>
       <p>Completed steps: {{ completedSteps }}</p>
     </radial-progress-bar>
-    <b-btn variant="primary" v-if="status != 1" @click="start">
+    <b-row>
+    <b-btn variant="link" v-if="status != 1" @click="start">
       <font-awesome-icon :icon="['fas', 'play']"></font-awesome-icon>
     </b-btn>
-    <b-btn variant="primary" v-if="status == 1" @click="pause">
+    <b-btn variant="link" v-if="status == 1" @click="pause">
       <font-awesome-icon :icon="['fas', 'pause']"></font-awesome-icon>
     </b-btn>
-    <b-btn variant="primary" v-if="current.length > 0 || todos.length > 0" @click="finish(true)">
+    <b-btn variant="link" v-if="current.length > 0 || todos.length > 0" @click="finish(true)">
       <font-awesome-icon :icon="['fas', 'step-forward']"></font-awesome-icon>
     </b-btn>
+    </b-row>
   </div>
 </template>
 
