@@ -2,6 +2,13 @@
   <div id="home">
     <h1>{{ currentText }}</h1>
     <h2>{{ timetext }}</h2>
+    <radial-progress-bar
+      :diameter="200"
+      :completed-steps="timeleft"
+      :total-steps="totalSteps">
+      <p>Total steps: {{ totalSteps }}</p>
+      <p>Completed steps: {{ completedSteps }}</p>
+    </radial-progress-bar>
     <b-btn variant="primary" v-if="status != 1" @click="start">
       <font-awesome-icon :icon="['fas', 'play']"></font-awesome-icon>
     </b-btn>
@@ -22,12 +29,18 @@ export default {
       // 1 = 暫停
       // 2 = 播放
       status: 0,
-      timer: 0
+      timer: 0,
+      completedSteps: 0,
+      totalSteps: 5
     }
   },
   computed: {
     currentText () {
-      return this.current.length > 0 ? this.current : this.todos.length > 0 ? '點擊開始' : '沒有事項'
+      return this.current.length > 0
+        ? this.current
+        : this.todos.length > 0
+          ? '點擊開始'
+          : '沒有事項'
     },
     timetext () {
       const m = Math.floor(this.timeleft / 60)
