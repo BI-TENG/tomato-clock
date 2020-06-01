@@ -14,6 +14,7 @@ import RadialProgressBar from 'vue-radial-progress'
 
 import 'noto-sans-tc/noto_sans_tc_regular/css.css'
 import './style/style.styl'
+import CircleMenu from 'vue-circle-menu'
 
 Vue.config.productionTip = false
 
@@ -22,6 +23,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.component('draggable', draggable)
 Vue.component('RadialProgressBar', RadialProgressBar)
+Vue.component('CircleMenu', CircleMenu)
 
 new Vue({
   router,
