@@ -11,6 +11,9 @@ import { faCheck, faPen, faTimes, faUndo, faSave, faPlay, faPause, faStepForward
 
 import draggable from 'vuedraggable'
 
+import 'noto-sans-tc/noto_sans_tc_regular/css.css'
+import './style/style.styl'
+
 Vue.config.productionTip = false
 
 library.add(faCheck, faPen, faTimes, faUndo, faSave, faPlay, faPause, faStepForward)
