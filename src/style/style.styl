@@ -1,17 +1,28 @@
 body
   font-family var(--font-family-sans-serif), "Noto Sans TC"
+  background-color rgba(0, 0, 0, 0.5)
+  background-image url('../../public/img/02.jpg')
+  background-repeat no-repeat
+  background-size cover
+  background-position center
+  
+body,
+html
+  height: 100%
 
-#nav
-  position absolute
-  top 0
-  bottom 0
-  right 0
-  left 0
-  margin auto
+.oy-menu-btn .icon-bars
+  background black
 
-#home
+.oy-menu-btn .icon-bars:after
+  background black
+
+.oy-menu-item a
   display flex
-  flex-direction column
   align-items center
   justify-content center
-  // height 100vh
+  height 100%
+
+#list
+  table 
+    background-color rgba(255, 255, 255, 0.7)
+    margin auto

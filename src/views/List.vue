@@ -1,8 +1,11 @@
 <template>
-  <div id="list">
-    <b-form-input v-model="newtodo"></b-form-input>
-    <b-btn variant="success" @click="addTodo">新增</b-btn>
-    <b-table-simple>
+  <div id="list" class="w-100">
+    <div class="h1 d-flex justify-content-center my-3">list</div>
+      <b-container class="form-inline">
+          <b-form-input v-model="newtodo" class="col-9"></b-form-input>
+          <b-btn variant="success" class="col-3" @click="addTodo">新增</b-btn>
+        </b-container>
+      <b-table-simple striped class="text-center">
       <b-thead>
         <b-tr>
           <b-th>事項</b-th>
@@ -53,6 +56,7 @@ export default {
   methods: {
     addTodo () {
       this.$store.commit('addTodo', this.newtodo)
+      this.newtodo = ''
     },
     delTodo (index) {
       this.$store.commit('delTodo', index)

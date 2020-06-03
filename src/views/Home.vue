@@ -1,26 +1,31 @@
 <template>
-  <div id="home">
-    <h1>{{ currentText }}</h1>
-    <h2>{{ timetext }}</h2>
-    <radial-progress-bar
-      :diameter="200"
-      :completed-steps="timeleft"
-      :total-steps="totalSteps"
-      :start-color="startColor">
-      <p>Total steps: {{ totalSteps }}</p>
-      <p>Completed steps: {{ completedSteps }}</p>
-    </radial-progress-bar>
-    <b-row>
-      <b-btn variant="link" v-if="status != 1" @click="start">
-        <font-awesome-icon :icon="['fas', 'play']"></font-awesome-icon>
-      </b-btn>
-      <b-btn variant="link" v-if="status == 1" @click="pause">
-        <font-awesome-icon :icon="['fas', 'pause']"></font-awesome-icon>
-      </b-btn>
-      <b-btn variant="link" v-if="current.length > 0 || todos.length > 0" @click="finish(true)">
-        <font-awesome-icon :icon="['fas', 'step-forward']"></font-awesome-icon>
-      </b-btn>
-    </b-row>
+  <div id="home" class="w-100 h-100">
+    <b-container class="h-100 d-flex flex-column justify-content-center align-items-center" >
+      <b-row class="flex-column justify-content-center align-items-center">
+        <h1>{{ currentText }}</h1>
+        <h2>{{ timetext }}</h2>
+        <radial-progress-bar
+          :diameter="300"
+          :completed-steps="timeleft"
+          :total-steps="totalSteps"
+          :start-color="startColor"
+          :is-clockwise="isClockwise"
+          :stop-color="stopColor">
+          <img :src="'./img/01.gif'" height="170px" width="350px">
+        </radial-progress-bar>
+      </b-row>
+      <b-row class="justify-content-center align-items-center">
+        <b-btn variant="link" v-if="status != 1" @click="start">
+          <font-awesome-icon :icon="['fas', 'play']"></font-awesome-icon>
+        </b-btn>
+        <b-btn variant="link" v-if="status == 1" @click="pause">
+          <font-awesome-icon :icon="['fas', 'pause']"></font-awesome-icon>
+        </b-btn>
+        <b-btn variant="link" v-if="current.length > 0 || todos.length > 0" @click="finish(true)">
+          <font-awesome-icon :icon="['fas', 'step-forward']"></font-awesome-icon>
+        </b-btn>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -35,7 +40,9 @@ export default {
       timer: 0,
       completedSteps: 0,
       totalSteps: 5,
-      startColor: 'pink'
+      startColor: '#67EFFF',
+      stopColor: '#C1D6FF',
+      isClockwise: false
     }
   },
   computed: {
