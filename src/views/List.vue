@@ -33,7 +33,7 @@
               <font-awesome-icon :icon="['fas', 'pen']"></font-awesome-icon>
             </b-btn>
             <b-btn variant="link" class="text-danger" @click="delTodo(index)">
-              <font-awesome-icon :icon="['fas', 'times']"></font-awesome-icon>
+              <font-awesome-icon :icon="['fas', 'trash-alt']"></font-awesome-icon>
             </b-btn>
           </b-td>
         </b-tr>
