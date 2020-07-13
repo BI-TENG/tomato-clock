@@ -1,10 +1,10 @@
 <template>
-  <div id="settings">
+  <div id="settings" class="w-100">
     <div class="h1 d-flex justify-content-center my-3">Setting</div>
     <b-table striped :items="items" :fields="fields" @row-clicked="selectAlarm">
       <!-- 鬧鐘 -->
       <template v-slot:cell(preview)="data">
-        <audio controls :src="'./alarms/'+data.item.file"></audio>
+        <audio controls :src="'./alarms/'+data.item.file" ></audio>
       </template>
       <!-- 勾選 -->
       <template v-slot:cell(select)="data">
