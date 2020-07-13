@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="h-100">
-    <div class="h1 d-flex justify-content-center my-3">Home</div>
     <b-container class="h-100">
       <b-row class="h-100">
         <router-view></router-view>
