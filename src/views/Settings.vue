@@ -20,19 +20,19 @@ export default {
     return {
       items: [
         {
-          name: '鬧鈴1',
+          name: '鈴1',
           file: 'alarm1.mp3'
         },
         {
-          name: '鬧鈴2',
+          name: '鈴2',
           file: 'alarm2.mp3'
         },
         {
-          name: '鬧鈴3',
+          name: '鈴3',
           file: 'alarm3.mp3'
         },
         {
-          name: '鬧鈴4',
+          name: '鈴4',
           file: 'alarm4.mp3'
         }
       ],
