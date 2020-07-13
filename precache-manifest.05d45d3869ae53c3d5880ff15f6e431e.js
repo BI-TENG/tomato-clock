@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "alarms/alarm4.mp3"
   },
   {
-    "revision": "20f468c97a57d8aa3f28",
+    "revision": "08c6f1e915fa9c8f80b7",
     "url": "css/app.57b43b12.css"
   },
   {
@@ -436,12 +436,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/休息.gif"
   },
   {
-    "revision": "6fdc8981fdebcf2518c735abec77097d",
+    "revision": "c61e8b7d26e1a98666e48a64d37e884e",
     "url": "index.html"
   },
   {
-    "revision": "20f468c97a57d8aa3f28",
-    "url": "js/app.3f465277.js"
+    "revision": "08c6f1e915fa9c8f80b7",
+    "url": "js/app.ba6ad0c5.js"
   },
   {
     "revision": "33fd4fa9e8e58fda3361",
