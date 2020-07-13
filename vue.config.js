@@ -7,7 +7,7 @@ module.exports = {
       name: '番茄鍾',
       short_name: '番茄鍾',
       // APP 主題顏色
-      theme_color: '#4DBA87',
+      theme_color: '#24A6A6',
       // APP 啟動畫面背景色
       background_color: '#000',
       // APP 顯示範圍

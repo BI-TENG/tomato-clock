@@ -1,17 +1,20 @@
 <template>
   <div id="home" class="w-100 h-100">
-    <b-container class="h-100 d-flex flex-column justify-content-center align-items-center" >
+  <div class="h1 d-flex justify-content-center my-3">Pomodoro</div>
+    <b-container class="d-flex flex-column justify-content-center align-items-center h-75" >
       <b-row class="flex-column justify-content-center align-items-center">
         <h1>{{ currentText }}</h1>
         <h2>{{ timetext }}</h2>
         <radial-progress-bar
           :diameter="300"
-          :completed-steps="timeleft"
+          :completed-steps="completedSteps"
           :total-steps="totalSteps"
           :start-color="startColor"
           :is-clockwise="isClockwise"
           :stop-color="stopColor">
-          <img :src="'./img/01.gif'" height="170px" width="350px">
+          <img :src="'./img/01.gif'" height="170px" width="350px" v-if="status=='1'" @click="pause">
+          <img :src="'./img/休息.gif'" height="170px" width="200px" v-else-if="status=='0'">
+          <img :src="'./img/02.gif'" height="170px" width="200px" v-else-if="status=='2'">
         </radial-progress-bar>
       </b-row>
       <b-row class="justify-content-center align-items-center">
@@ -34,12 +37,12 @@ export default {
   data () {
     return {
       // 0 = 停止
-      // 1 = 暫停
-      // 2 = 播放
+      // 1 = 播放
+      // 2 = 暫停
       status: 0,
       timer: 0,
-      completedSteps: 0,
-      totalSteps: 5,
+      // completedSteps: 0,
+      // totalSteps: parseInt(process.env.VUE_APP_TIMELEFT),
       startColor: '#67EFFF',
       stopColor: '#C1D6FF',
       isClockwise: false
@@ -51,7 +54,7 @@ export default {
         ? this.current
         : this.todos.length > 0
           ? '點擊開始'
-          : '沒有事項'
+          : '請新增待辦事項'
     },
     timetext () {
       const m = Math.floor(this.timeleft / 60)
@@ -69,6 +72,12 @@ export default {
     },
     todos () {
       return this.$store.getters.todos
+    },
+    totalSteps () {
+      return this.$store.getters.totaltimes
+    },
+    completedSteps () {
+      return this.totalSteps - this.timeleft
     }
   },
   methods: {

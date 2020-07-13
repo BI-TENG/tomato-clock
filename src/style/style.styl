@@ -1,12 +1,52 @@
 body
   font-family var(--font-family-sans-serif), "Noto Sans TC"
+  background-color rgba(0, 0, 0, 0.5)
+  background-image url('../../public/img/02.jpg')
+  background-repeat no-repeat
+  background-size cover
+  background-position center
+  
+body,
+html
+  height: 100%
+
+
+.oy-menu-btn .icon-bars
+  background black
+
+.oy-menu-btn .icon-bars:after
+  background black
+
 
 body,
 html
   height: 100%
+
+#nav1
+  a
+    font-size: 1.5rem
+    color: #24A6A6
 
 .oy-menu-item a
   display flex
   align-items center
   justify-content center
   height 100%
+
+#list
+  table 
+    background-color rgba(255, 255, 255, 0.7)
+    margin auto
+  #pagination
+    display flex
+    justify-content center
+
+#settings
+  table
+    th 
+      text-align: center
+      padding: 0
+    td
+      text-align: center
+      padding: 5px 0 0 0
+

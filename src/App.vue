@@ -2,11 +2,13 @@
   <div id="app" class="h-100">
     <b-container class="h-100">
       <b-row class="h-100">
-        <router-view></router-view>
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
       </b-row>
     </b-container>
-    <div id="nav" class="d-flex justify-content-center fixed-bottom">
-      <circle-menu type="middle" :number='4' circle btn :colors="[ '#FF6666', '#FF9966', '#FFCCCC', '#CCCCFF', '#CCFFCC']">
+    <div id="nav" class="d-flex justify-content-start fixed-bottom">
+      <circle-menu type="left" :number='3' circle btn :colors="[ '#F27141', '#F2441D', '#F29422', '#734646' ]">
         <router-link to="/" slot="item_1">
           <font-awesome-icon class="text-white" size=2x :icon="['fas', 'home']" />
         </router-link> |
@@ -16,7 +18,6 @@
         <router-link to="/settings" slot="item_3">
           <font-awesome-icon class="text-white" size=2x :icon="['fas', 'music']" />
         </router-link> |
-        <router-link to="/" slot="item_4"></router-link> |
       </circle-menu>
     </div>
   </div>

@@ -1,9 +1,10 @@
 <template>
-  <div id="settings">
-    <b-table :items="items" :fields="fields" @row-clicked="selectAlarm">
+  <div id="settings" class="w-100">
+    <div class="h1 d-flex justify-content-center my-3">Setting</div>
+    <b-table striped :items="items" :fields="fields" @row-clicked="selectAlarm">
       <!-- 鬧鐘 -->
       <template v-slot:cell(preview)="data">
-        <audio controls :src="'./alarms/'+data.item.file"></audio>
+        <audio controls :src="'./alarms/'+data.item.file" ></audio>
       </template>
       <!-- 勾選 -->
       <template v-slot:cell(select)="data">
@@ -19,12 +20,20 @@ export default {
     return {
       items: [
         {
-          name: '鬧鈴',
+          name: '鈴1',
           file: 'alarm1.mp3'
         },
         {
-          name: '鬧鈴2',
+          name: '鈴2',
           file: 'alarm2.mp3'
+        },
+        {
+          name: '鈴3',
+          file: 'alarm3.mp3'
+        },
+        {
+          name: '鈴4',
+          file: 'alarm4.mp3'
         }
       ],
       fields: [
