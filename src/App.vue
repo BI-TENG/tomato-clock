@@ -1,12 +1,13 @@
 <template>
   <div id="app" class="h-100">
+    <div class="h1 d-flex justify-content-center my-3">Home</div>
     <b-container class="h-100">
       <b-row class="h-100">
         <router-view></router-view>
       </b-row>
     </b-container>
-    <div id="nav" class="d-flex justify-content-center fixed-bottom">
-      <circle-menu type="left" :number='4' circle btn :colors="[ '#F27141', '#F2441D', '#F29422', '#734646', '#ffffff00' ]">
+    <div id="nav" class="d-flex justify-content-start fixed-bottom">
+      <circle-menu type="left" :number='3' circle btn :colors="[ '#F27141', '#F2441D', '#F29422', '#734646' ]">
         <router-link to="/" slot="item_1">
           <font-awesome-icon class="text-white" size=2x :icon="['fas', 'home']" />
         </router-link> |
