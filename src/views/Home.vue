@@ -1,7 +1,7 @@
 <template>
   <div id="home" class="w-100 h-100">
-    <div class="h1 d-flex justify-content-center my-3">Home</div>
-    <b-container class="d-flex flex-column justify-content-center align-items-center" >
+  <div class="h1 d-flex justify-content-center my-3">Home</div>
+    <b-container class="d-flex flex-column justify-content-center align-items-center h-75" >
       <b-row class="flex-column justify-content-center align-items-center">
         <h1>{{ currentText }}</h1>
         <h2>{{ timetext }}</h2>

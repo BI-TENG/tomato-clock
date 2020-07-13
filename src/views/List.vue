@@ -49,7 +49,7 @@ export default {
   data () {
     return {
       type: 'search',
-      perPage: 7,
+      perPage: 4,
       currentPage: 1,
       newtodo: '',
       // 轉場效果
