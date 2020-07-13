@@ -34,6 +34,9 @@ export default new Vuex.Store({
     },
     isBreak (state) {
       return state.isBreak
+    },
+    totaltimes (state) {
+      return !state.isBreak ? timeleft : timeleftBreak
     }
   },
   mutations: {

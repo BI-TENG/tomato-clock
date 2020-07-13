@@ -6,7 +6,7 @@
       </b-row>
     </b-container>
     <div id="nav" class="d-flex justify-content-center fixed-bottom">
-      <circle-menu type="middle" :number='4' circle btn :colors="[ '#F2F2F2', '#F2441D', '#F29422', '#734646', '#24A6A6']">
+      <circle-menu type="left" :number='4' circle btn :colors="[ '#F27141', '#F2441D', '#F29422', '#734646', '#ffffff00' ]">
         <router-link to="/" slot="item_1">
           <font-awesome-icon class="text-white" size=2x :icon="['fas', 'home']" />
         </router-link> |
@@ -16,7 +16,6 @@
         <router-link to="/settings" slot="item_3">
           <font-awesome-icon class="text-white" size=2x :icon="['fas', 'music']" />
         </router-link> |
-        <router-link to="/" slot="item_4"></router-link> |
       </circle-menu>
     </div>
   </div>

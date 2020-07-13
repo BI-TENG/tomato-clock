@@ -1,6 +1,7 @@
 <template>
   <div id="settings">
-    <b-table :items="items" :fields="fields" @row-clicked="selectAlarm">
+    <div class="h1 d-flex justify-content-center my-3">Setting</div>
+    <b-table striped :items="items" :fields="fields" @row-clicked="selectAlarm">
       <!-- 鬧鐘 -->
       <template v-slot:cell(preview)="data">
         <audio controls :src="'./alarms/'+data.item.file"></audio>
@@ -19,12 +20,20 @@ export default {
     return {
       items: [
         {
-          name: '鬧鈴',
+          name: '鬧鈴1',
           file: 'alarm1.mp3'
         },
         {
           name: '鬧鈴2',
           file: 'alarm2.mp3'
+        },
+        {
+          name: '鬧鈴3',
+          file: 'alarm3.mp3'
+        },
+        {
+          name: '鬧鈴4',
+          file: 'alarm4.mp3'
         }
       ],
       fields: [
