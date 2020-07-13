@@ -4,15 +4,23 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "alarms/alarm1.mp3"
   },
   {
-    "revision": "1f710fb76cf3dd5b349cbb1eb217acc9",
+    "revision": "67c2903a924c4c77762d9b6aebc5c559",
     "url": "alarms/alarm2.mp3"
   },
   {
-    "revision": "5be1d65827e317772741",
-    "url": "css/app.a5927061.css"
+    "revision": "3b9b06854b194d93fd69ae23d667a5fa",
+    "url": "alarms/alarm3.mp3"
   },
   {
-    "revision": "d96ea5fe34dafca1ab46",
+    "revision": "c1072868a634d87c61af223b73f8a38d",
+    "url": "alarms/alarm4.mp3"
+  },
+  {
+    "revision": "a357482285c264d37be2",
+    "url": "css/app.3ca16c64.css"
+  },
+  {
+    "revision": "33fd4fa9e8e58fda3361",
     "url": "css/chunk-vendors.52bb5f30.css"
   },
   {
@@ -416,35 +424,43 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/02.1c21a043.jpg"
   },
   {
+    "revision": "08b7c78131c173765180ec2446696ff6",
+    "url": "img/02.gif"
+  },
+  {
     "revision": "1c21a043a0c6775f4d15ceb3b1b06eb7",
     "url": "img/02.jpg"
   },
   {
-    "revision": "a8030b9d5d6aac6e4090e5165182444c",
+    "revision": "240b3f51f3f67667059aeedca1141e8e",
+    "url": "img/休息.gif"
+  },
+  {
+    "revision": "b70709b6b0a90dc763c968b2e973681f",
     "url": "index.html"
   },
   {
-    "revision": "5be1d65827e317772741",
-    "url": "js/app.adbcff04.js"
+    "revision": "a357482285c264d37be2",
+    "url": "js/app.6d0bdb4b.js"
   },
   {
-    "revision": "d96ea5fe34dafca1ab46",
-    "url": "js/chunk-vendors.3e2a7d2c.js"
+    "revision": "33fd4fa9e8e58fda3361",
+    "url": "js/chunk-vendors.2588b6c2.js"
   },
   {
-    "revision": "01e1bdbb96d7a998521d",
-    "url": "js/list.7064ed6e.js"
+    "revision": "5c09919651c7105ffde4",
+    "url": "js/list.aa688822.js"
   },
   {
-    "revision": "cca33f8eca2959cdfc9b",
-    "url": "js/notfound.79f97537.js"
+    "revision": "07eed439e3ac554273fc",
+    "url": "js/notfound.c386cfe3.js"
   },
   {
-    "revision": "9b0d0db46f2d566f57b6",
-    "url": "js/settings.d08818b3.js"
+    "revision": "5ad65901f3440e1781bc",
+    "url": "js/settings.aa2e6159.js"
   },
   {
-    "revision": "d12274bc32cd9ab6f27ee4f0e63f0317",
+    "revision": "0b8cc2fe1b7d12e104798a52104e6d63",
     "url": "manifest.json"
   },
   {
