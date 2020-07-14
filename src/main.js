@@ -7,7 +7,7 @@ import store from './store'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faCheck, faPen, faTimes, faUndo, faSave, faPlay, faPause, faStepForward, faHome, faMusic, faListUl } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faPen, faTrashAlt, faUndo, faSave, faPlay, faPause, faStepForward, faHome, faMusic, faListUl } from '@fortawesome/free-solid-svg-icons'
 
 import draggable from 'vuedraggable'
 import RadialProgressBar from 'vue-radial-progress'
@@ -23,7 +23,7 @@ Vue.use(VueGtag, {
 
 Vue.config.productionTip = false
 
-library.add(faCheck, faPen, faTimes, faUndo, faSave, faPlay, faPause, faStepForward, faHome, faMusic, faListUl)
+library.add(faCheck, faPen, faTrashAlt, faUndo, faSave, faPlay, faPause, faStepForward, faHome, faMusic, faListUl)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.component('draggable', draggable)
