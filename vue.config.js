@@ -4,8 +4,8 @@ module.exports = {
     // manifest.json 的設定
     manifestOptions: {
       // APP 名稱
-      name: '番茄鍾',
-      short_name: '番茄鍾',
+      name: '番茄鐘',
+      short_name: '番茄鐘',
       // APP 主題顏色
       theme_color: '#24A6A6',
       // APP 啟動畫面背景色
