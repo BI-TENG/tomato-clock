@@ -2,7 +2,9 @@
   <div id="app" class="h-100">
     <b-container class="h-100">
       <b-row class="h-100">
-        <router-view></router-view>
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
       </b-row>
     </b-container>
     <div id="nav" class="d-flex justify-content-start fixed-bottom">
