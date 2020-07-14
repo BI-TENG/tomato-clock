@@ -1,11 +1,24 @@
-# 番茄鐘 https://bi-teng.github.io/tomato-clock/#/
-# app 截圖
-- 首頁 / 工作時 / 暫停時
+# pomodoro
 
-![](https://i.imgur.com/hGATgmB.png)  ![](https://i.imgur.com/Wi85HA2.png) ![](https://i.imgur.com/5oZlM7q.png)
-- 清單
+## Project setup
+```
+npm install
+```
 
-![](https://i.imgur.com/t0RQUxB.png)
-- 設定
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-![](https://i.imgur.com/bDUjUMo.png)
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
